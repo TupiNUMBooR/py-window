@@ -6,7 +6,7 @@ import wx
 def on_button(e):
     label.SetLabelText(text.get())
     if not hasattr(app, 'im'):
-        im = wx.Image("./240.png", wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+        im = wx.Image("./240.jpg", wx.BITMAP_TYPE_ANY).ConvertToBitmap()
         app.im = wx.StaticBitmap(frm, -1, im)
         sizer.Add(app.im)
     sizer.Fit(frm)
