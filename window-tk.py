@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 import text
 from tkinter import *
-
+from PIL import ImageTk, Image
+import pillow_avif
 
 def on_button():
     # https://www.pythontutorial.net/tkinter/tkinter-photoimage/
-    # https://placekitten.com/640/240
-    tk.im = PhotoImage(file="./240.png")
+    tk.im = ImageTk.PhotoImage(Image.open('240.avif'))
+    # tk.im = PhotoImage(file="./240.jpg")
     l_im.config(image=tk.im)
     l_txt.config(text=text.get())
 
